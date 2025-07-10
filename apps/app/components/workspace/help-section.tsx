@@ -78,7 +78,7 @@ export const WorkspaceHelpSection: FC<WorkspaceHelpSectionProps> = (props) => {
         <RocketLaunchIcon className="h-4 w-4 text-brand-secondary" />
         {!sidebarCollapse && <span>Shortcuts</span>}
       </button>
-      <button
+      {/* <button
         type="button"
         className={`flex items-center gap-x-1 rounded-md px-2 py-2 text-xs font-medium text-brand-secondary outline-none hover:bg-brand-surface-1 hover:text-brand-base ${
           sidebarCollapse ? "w-full justify-center" : ""
@@ -88,7 +88,7 @@ export const WorkspaceHelpSection: FC<WorkspaceHelpSectionProps> = (props) => {
       >
         <QuestionMarkCircleIcon className="h-4 w-4 text-brand-secondary" />
         {!sidebarCollapse && <span>Help</span>}
-      </button>
+      </button> */}
       <button
         type="button"
         className="flex items-center gap-3 rounded-md px-2 py-2 text-xs font-medium text-brand-secondary outline-none hover:bg-brand-surface-1 hover:text-brand-base md:hidden"

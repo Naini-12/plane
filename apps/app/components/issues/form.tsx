@@ -359,14 +359,14 @@ export const IssueForm: FC<IssueFormProps> = ({
                       )}
                     </button>
                   )}
-                  <button
+                  {/* <button
                     type="button"
                     className="flex items-center gap-1 rounded px-1.5 py-1 text-xs hover:bg-brand-surface-1"
                     onClick={() => setGptAssistantModal((prevData) => !prevData)}
                   >
                     <SparklesIcon className="h-4 w-4" />
                     AI
-                  </button>
+                  </button> */}
                 </div>
                 <Controller
                   name="description"

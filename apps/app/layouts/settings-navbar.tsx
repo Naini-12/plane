@@ -21,18 +21,18 @@ const SettingsNavbar: React.FC<Props> = ({ profilePage = false }) => {
       label: "Members",
       href: `/${workspaceSlug}/settings/members`,
     },
-    {
-      label: "Billing & Plans",
-      href: `/${workspaceSlug}/settings/billing`,
-    },
-    {
-      label: "Integrations",
-      href: `/${workspaceSlug}/settings/integrations`,
-    },
-    {
-      label: "Import/Export",
-      href: `/${workspaceSlug}/settings/import-export`,
-    },
+    // {
+    //   label: "Billing & Plans",
+    //   href: `/${workspaceSlug}/settings/billing`,
+    // },
+    // {
+    //   label: "Integrations",
+    //   href: `/${workspaceSlug}/settings/integrations`,
+    // },
+    // {
+    //   label: "Import/Export",
+    //   href: `/${workspaceSlug}/settings/import-export`,
+    // },
   ];
 
   const projectLinks: Array<{
