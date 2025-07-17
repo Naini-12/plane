@@ -168,19 +168,22 @@ USE_L10N = True
 
 USE_TZ = True
 
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# Host for sending e-mail.
+# # Host for sending e-mail.
 EMAIL_HOST = os.environ.get("EMAIL_HOST")
-# Port for sending e-mail.
+# # Port for sending e-mail.
 EMAIL_PORT = int(os.environ.get("EMAIL_PORT", 587))
-# Optional SMTP authentication information for EMAIL_HOST.
+# # Optional SMTP authentication information for EMAIL_HOST.
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
-EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "1") == "1"
+# EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS")
+# EMAIL_USE_SSL = os.environ.get("EMAIL_USE_SSL")
+EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "False").strip().lower() in ("true", "1", "yes")
+EMAIL_USE_SSL = os.environ.get("EMAIL_USE_SSL", "False").strip().lower() in ("true", "1", "yes")
+print("tls",EMAIL_USE_TLS)
 EMAIL_FROM = os.environ.get("EMAIL_FROM", "Team Plane <team@mailer.plane.so>")
-
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=10080),
